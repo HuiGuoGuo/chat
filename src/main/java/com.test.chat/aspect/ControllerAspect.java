@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class ControllerAspect {
-    private static final Logger logger = LoggerFactory.getLogger(ControllerAspect.class);
+    private static final Logger Log = LoggerFactory.getLogger(ControllerAspect.class);
 
     @Pointcut("execution(* com.test.chat.controller..*.*(..))")
     public void pointcut() {
@@ -26,12 +26,12 @@ public class ControllerAspect {
         long startTime = System.currentTimeMillis();
         String methodInfo = jp.getTarget().getClass().getSimpleName() + "." + jp.getSignature().getName();
         String paramInfo = JSON.toJSONString(jp.getArgs());
-        logger.info("调用方法:{},  参数:{}}", methodInfo, paramInfo);
+        Log.info("调用方法:{},  参数:{}}", methodInfo, paramInfo);
         rvt = jp.proceed();
         long endTime = System.currentTimeMillis();
         String returnInfo = JSON.toJSONString(rvt);
         long time = endTime - startTime;
-        logger.info("{调用方法:{},  返回值:{},  耗时:{}毫秒}", methodInfo, returnInfo, time);
+        Log.info("{调用方法:{},  返回值:{},  耗时:{}毫秒}", methodInfo, returnInfo, time);
         return rvt;
     }
 } 

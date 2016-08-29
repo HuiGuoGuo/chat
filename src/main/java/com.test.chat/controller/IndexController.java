@@ -11,10 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class IndexController {
-    private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index() {
-        logger.info("123");
         return "index";
     }
 }
