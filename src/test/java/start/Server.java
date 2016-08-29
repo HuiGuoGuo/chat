@@ -1,5 +1,5 @@
 package start;
-public class PortalServer {
+public class Server {
 
 	/**
 	 *
@@ -7,7 +7,7 @@ public class PortalServer {
 	 * @throws Exception
 	 */
 	public static void main( String[] args ) throws Exception {
-		TomcatBootstrap.start( 80, Profiles.DEVELOPMENT );
+		TomcatBootstrap.start( 80, Profiles.DEVELOPMENT);
 
 	}
 
