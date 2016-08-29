@@ -21,6 +21,7 @@ public class LogbackConfigListener implements ServletContextListener {
         // 从web.xml中加载指定文件名的日志配置文件
         String logbackConfigLocation = event.getServletContext().getInitParameter(CONFIG_LOCATION);
         String fn = event.getServletContext().getRealPath(logbackConfigLocation);
+        System.out.println(fn);
         try {
             LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
             loggerContext.reset();
