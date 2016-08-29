@@ -14,8 +14,10 @@
 		  http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 		  "
        default-lazy-init="false">
+
     <!-- 扫描指定的包中的类上的注解 -->
-    <context:component-scan base-package="com.stone.chat"/>
+    <context:component-scan base-package="com.test.chat"/>
+
     <aop:aspectj-autoproxy proxy-target-class="false"/>
     <!-- no resource view resolver, api service do not need it-->
     <!-- be careful!!!! DO NOT mapping resources , DO NOT mapping default-mvc-controller!!!!we handle it by ourselves -->
@@ -28,6 +30,7 @@
             </bean>
         </mvc:message-converters>
     </mvc:annotation-driven>
+    <!--不用处理静态资源-->
     <mvc:default-servlet-handler/>
 
 

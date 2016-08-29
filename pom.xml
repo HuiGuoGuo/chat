@@ -25,6 +25,7 @@
         <jsp.version>2.2</jsp.version>
         <aspectj.version>1.7.3</aspectj.version>
         <cglib.version>3.1</cglib.version>
+        <fastjson.version>1.2.5</fastjson.version>
     </properties>
     <dependencies>
         <dependency>
@@ -184,6 +185,12 @@
             <groupId>cglib</groupId>
             <artifactId>cglib-nodep</artifactId>
             <version>${cglib.version}</version>
+        </dependency>
+        <!-- json -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
     </dependencies>
 

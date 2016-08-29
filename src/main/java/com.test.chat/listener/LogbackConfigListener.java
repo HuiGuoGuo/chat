@@ -1,4 +1,4 @@
-package com.stone.chat.listener;
+package com.test.chat.listener;
 
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.joran.JoranConfigurator;
