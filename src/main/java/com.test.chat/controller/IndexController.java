@@ -11,11 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class IndexController {
-    private static final Logger Log = LoggerFactory.getLogger(IndexController.class);
+    private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index() {
-        Log.info("index");
-        System.out.println("index");
+        logger.info("123");
         return "index";
     }
 }
